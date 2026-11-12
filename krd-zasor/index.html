@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
 <style>
-:root{--bg:#f6f5f1;--card:#ffffff;--ink:#22231f;--mute:#6a6c62;--line:#e2e1d8;--acc:#3c6e47;--acc-ink:#fff}
+:root{--bg:#EEF2F8;--card:#ffffff;--ink:#0B1B3A;--mute:#4A5A78;--line:#D3DCEB;--acc:#FFC107;--acc-ink:#0B1B3A}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 a{color:inherit}
@@ -23,11 +23,13 @@ nav{display:flex;gap:18px;font-size:15px}
 nav a{text-decoration:none;color:var(--mute)}
 nav a:hover{color:var(--ink)}
 @media(max-width:640px){nav{display:none}}
-.hero{background:linear-gradient(135deg,#e2ead9,#f6f5ee 60%,#e9e4d3);color:#22231f}
+.hero{background:linear-gradient(180deg,#0A1F4A,#0E2B63);color:#fff}
 .hero .w{padding-top:64px;padding-bottom:64px}
-.kicker{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#6a6c62;margin:0 0 12px}
+.hero .w.hasimg{padding-top:20px}
+.heroimg{display:block;width:100%;max-width:640px;height:auto;border-radius:14px;margin:0 0 28px}
+.kicker{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#C9D6EE;margin:0 0 12px}
 h1{font-size:clamp(32px,6.4vw,54px);line-height:1.08;margin:0 0 16px;letter-spacing:-.025em;max-width:16ch;font-weight:800;text-wrap:balance}
-.lead{font-size:19px;color:#6a6c62;max-width:52ch;margin:0 0 26px}
+.lead{font-size:19px;color:#C9D6EE;max-width:52ch;margin:0 0 26px}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;background:var(--acc);color:var(--acc-ink);text-decoration:none;font-weight:600;padding:12px 22px;border-radius:10px;border:2px solid var(--acc);cursor:pointer;transition:filter .18s ease,background-color .18s ease}
 .btn:hover{filter:brightness(1.08)}
@@ -38,7 +40,7 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6p
 .btn.ghost{background:transparent;color:inherit;border-color:currentColor}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:-28px;position:relative}
 .fact{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}
-.fact i{color:var(--acc);flex:none;margin-top:2px}
+.fact i{color:#C98F00;flex:none;margin-top:2px}
 .fact b{display:block;font-size:17px}
 .fact span{color:var(--mute);font-size:15px}
 section{padding:54px 0 0}
@@ -48,7 +50,7 @@ h2{font-size:28px;margin:0 0 18px;letter-spacing:-.01em}
 .row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line)}
 .group h3+.row,.row:first-child{border-top:0}
 .row .n small{display:block;color:var(--mute);font-size:14px}
-.row .p{white-space:nowrap;font-weight:700;color:var(--acc);font-variant-numeric:tabular-nums}
+.row .p{white-space:nowrap;font-weight:700;color:#0E2B63;font-variant-numeric:tabular-nums}
 .note{color:var(--mute);font-size:14px;margin:10px 2px 0}
 .about{font-size:18px;max-width:64ch}
 .ph{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
@@ -71,7 +73,7 @@ footer{margin-top:60px;padding:22px 0 90px;border-top:1px solid var(--line);colo
 <div class="demo">Демо-версия сайта, сделана для «Сантехник ЗАСОР Краснодар 24/7». Нравится? <a href="https://t.me/destroyed_yourself" target="_blank" rel="noopener">Напишите автору</a>, доработаю под вас.</div>
 <header><div class="w"><a class="brand" href="#">Сантехник ЗАСОР Краснодар 24/7</a><nav><a href="#services">Услуги и цены</a><a href="#contacts">Контакты</a></nav></div></header>
 
-<div class="hero"><div class="w">
+<div class="hero"><div class="w hasimg"><img class="heroimg" src="banner.webp" alt="Сантехник ЗАСОР Краснодар 24/7" width="1080" height="895">
   <p class="kicker">Сантехник круглосуточно · Краснодар</p>
   <h1>Сантехник круглосуточно, от 990 ₽</h1>
   <p class="lead">Прочистка засоров любой сложности, в том числе гидродинамическая. Цену фиксируем до начала работ.</p>
