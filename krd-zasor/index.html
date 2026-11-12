@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
 <style>
-:root{--bg:#EEF2F8;--card:#ffffff;--ink:#0B1B3A;--mute:#4A5A78;--line:#D3DCEB;--acc:#FFC107;--acc-ink:#0B1B3A}
+:root{--bg:#0A1F4A;--card:rgba(12,32,74,.84);--ink:#ffffff;--mute:#C9D6EE;--line:rgba(255,255,255,.16);--acc:#FFC107;--acc-ink:#0B1B3A}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 a{color:inherit}
@@ -23,13 +23,13 @@ nav{display:flex;gap:18px;font-size:15px}
 nav a{text-decoration:none;color:var(--mute)}
 nav a:hover{color:var(--ink)}
 @media(max-width:640px){nav{display:none}}
-.hero{background:linear-gradient(180deg,#0A1F4A,#0E2B63);color:#fff}
+.hero{background:transparent;color:#fff}
 .hero .w{padding-top:64px;padding-bottom:64px}
 .hero .w.hasimg{padding-top:20px}
 .heroimg{display:block;width:100%;max-width:640px;height:auto;border-radius:14px;margin:0 0 28px}
-.kicker{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#C9D6EE;margin:0 0 12px}
+.kicker{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#D5E0F3;margin:0 0 12px}
 h1{font-size:clamp(32px,6.4vw,54px);line-height:1.08;margin:0 0 16px;letter-spacing:-.025em;max-width:16ch;font-weight:800;text-wrap:balance}
-.lead{font-size:19px;color:#C9D6EE;max-width:52ch;margin:0 0 26px}
+.lead{font-size:19px;color:#D5E0F3;max-width:52ch;margin:0 0 26px}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;background:var(--acc);color:var(--acc-ink);text-decoration:none;font-weight:600;padding:12px 22px;border-radius:10px;border:2px solid var(--acc);cursor:pointer;transition:filter .18s ease,background-color .18s ease}
 .btn:hover{filter:brightness(1.08)}
@@ -40,7 +40,7 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6p
 .btn.ghost{background:transparent;color:inherit;border-color:currentColor}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:24px;position:relative}
 .fact{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}
-.fact i{color:#C98F00;flex:none;margin-top:2px}
+.fact i{color:#FFC107;flex:none;margin-top:2px}
 .fact b{display:block;font-size:17px}
 .fact span{color:var(--mute);font-size:15px}
 section{padding:54px 0 0}
@@ -50,7 +50,7 @@ h2{font-size:28px;margin:0 0 18px;letter-spacing:-.01em}
 .row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line)}
 .group h3+.row,.row:first-child{border-top:0}
 .row .n small{display:block;color:var(--mute);font-size:14px}
-.row .p{white-space:nowrap;font-weight:700;color:#0E2B63;font-variant-numeric:tabular-nums}
+.row .p{white-space:nowrap;font-weight:700;color:#FFC107;font-variant-numeric:tabular-nums}
 .note{color:var(--mute);font-size:14px;margin:10px 2px 0}
 .about{font-size:18px;max-width:64ch}
 .ph{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
@@ -67,6 +67,9 @@ footer{margin-top:60px;padding:22px 0 90px;border-top:1px solid var(--line);colo
 .bar{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:10px 14px;display:none;gap:10px;z-index:6}
 .bar .btn{flex:1;text-align:center;padding:13px 10px}
 @media(max-width:640px){.bar{display:flex}}
+body::before{content:"";position:fixed;inset:-40px;background:url("bg.webp") center/cover no-repeat;filter:blur(5px) brightness(.55);z-index:-2}
+body::after{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(10,31,74,.58),rgba(10,31,74,.74));z-index:-1}
+body{background:#0A1F4A}header{background:rgba(8,24,58,.88)}.bar{background:rgba(8,24,58,.94);backdrop-filter:blur(8px)}.card,.group,.fact{backdrop-filter:blur(6px)}.demo{position:relative}
 </style>
 </head>
 <body>
